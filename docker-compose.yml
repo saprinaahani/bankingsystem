@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  account-manager:
+    build:
+      context: ./account-manager
+    environment:
+      - DATABASE_URL=postgresql://account_user:manager@localhost:5432/account_database
+      - SUPERTOKENS_CONNECTION_URI=https://try.supertokens.io
+      - SUPERTOKENS_API_DOMAIN=http://localhost:3000
+      - SUPERTOKENS_WEBSITE_DOMAIN=http://localhost:3001
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+
+  payment-manager:
+    build:
+      context: ./payment-manager
+    environment:
+      - DATABASE_URL=postgresql://payment_user:manager@localhost:5432/payment_database
+      - SUPERTOKENS_CONNECTION_URI=https://try.supertokens.io
+      - SUPERTOKENS_API_DOMAIN=http://localhost:3002
+      - SUPERTOKENS_WEBSITE_DOMAIN=http://localhost:3001
+    ports:
+      - "3002:3002"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: banking_database
+    ports:
+      - "5432:5432"
