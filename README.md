@@ -78,13 +78,13 @@ Environment Variables: Ensure the .env files in both services are correctly conf
 
 1. account-manager/.env:
 DATABASE_URL="postgresql://account_user:manager@localhost:5432/account_database"
-SUPERTOKENS_CONNECTION_URI="https://try.supertokens.io"
+SUPERTOKENS_CONNECTION_URI="http://localhost:3567"
 SUPERTOKENS_API_DOMAIN="http://localhost:3000"
 SUPERTOKENS_WEBSITE_DOMAIN="http://localhost:3001"
 
 2. payment-manager/.env:
 DATABASE_URL="postgresql://payment_user:manager@localhost:5432/payment_database"
-SUPERTOKENS_CONNECTION_URI="https://try.supertokens.io"
+SUPERTOKENS_CONNECTION_URI="http://localhost:3567"
 SUPERTOKENS_API_DOMAIN="http://localhost:3002"
 SUPERTOKENS_WEBSITE_DOMAIN="http://localhost:3001"
 
