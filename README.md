@@ -1,9 +1,9 @@
-Banking System - Test Project
+*Banking System - Test Project*
 
 This repository contains a test project for a backend development role. The project consists of two services: account-manager and payment-manager, designed to manage user accounts and process transactions, respectively. This README provides an overview of the project, setup instructions, and details on how to run and test the services.
 
 
-Project Overview
+*Project Overview*
 Services
 1. Account Manager Service (account-manager):
    Purpose: Manages user accounts including registration and login.
@@ -13,7 +13,7 @@ Services
    Technologies Used: Fastify, Prisma, PostgreSQL, Supertokens (for authentication).
 
 
-Tech Stack
+*Tech Stack*
 Backend Framework: Fastify
 Database: PostgreSQL
 ORM: Prisma
@@ -21,7 +21,7 @@ Authentication: Supertokens
 Containerization: Docker
 
 
-Getting Started
+*Getting Started*
 1. Prerequisites
 - Docker: Ensure Docker and Docker Compose are installed on your machine.
 - Node.js and npm: Required for local development and testing.
@@ -38,7 +38,7 @@ Getting Started
 - Payment Manager: http://localhost:3002
 
 
-Local Development
+*Local Development*
 1. Install Dependencies:
 Navigate to each service directory and install dependencies:
 - cd account-manager
@@ -52,7 +52,7 @@ Navigate to each service directory and install dependencies:
   npm start
 
 
-API Endpoints
+*API Endpoints*
 1. Account Manager API
 - POST /users/signup
   Description: Register a new user.
